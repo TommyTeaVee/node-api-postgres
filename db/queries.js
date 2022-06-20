@@ -2,9 +2,9 @@ const Pool = require('pg').Pool
 const pool = new Pool({
   user: 'admin',  //Database username
   host: 'localhost', 
-  database: 'api',
-  password: 'YOUR PASSWORD',
-  port: 5432,
+  database: 'userman',    //Let's call the database usermanagement
+  password: 'admin12345',  // Use your own password
+  port: 5432, // Default port for PostgreSQL
 })
 
 //Get All users in a DATABASE
@@ -78,7 +78,7 @@ const deleteUser = (req, res) =>{
 }
 
 
-//Exporting CRUD functions in a REST API
+//Exporting CRUD functions as modules to  REST API
 
 module.exports = {
   getUsers,
